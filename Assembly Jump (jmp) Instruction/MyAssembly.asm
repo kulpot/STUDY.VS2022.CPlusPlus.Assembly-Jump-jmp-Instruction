@@ -10,18 +10,28 @@ doit proc
 
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
-	; ------ Assembly Instruction Pointer ------
-	; EIP ---  Extended(32bits) Instruction Pointer -- a tracker to point its next location
+	; --------- Assembly Jump (jmp) Instruction ------------
 
-	move eax, 1
-	move eax, 2
-	move eax, 3
-	move eax, 4
-	move eax, 5
-	move eax, 6
+
+
+
+
 
 
 	ret
+
+	; ------ Assembly Instruction Pointer ------
+	; EIP ---  Extended(32bits) Instruction Pointer -- a tracker to point its next location
+
+	;move eax, 1
+	;move eax, 2
+	;move eax, 3
+	;move eax, 4
+	;move eax, 5
+	;move eax, 6
+	;
+	;
+	;ret
 
 	; ---------- Assembly Flags Register Sign Bit and Zero Bit -------------
 
