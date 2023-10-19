@@ -11,11 +11,20 @@ doit proc
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
 	; --------- Assembly Jump (jmp) Instruction ------------
+	; EIP ---  Extended(32bits) Instruction Pointer -- a tracker to point its next instruction to execute
+	; jmp --- same as goto(requires knowledge in goto)
+	; main point is that every time you use a break, continue, return, if, while, for, do-while, and even a throw, you are using goto. They are just "controlled" or "structured" gotos, but they are still gotos.  However, in C# and C++, a goto is best if only used to break out of nested loops. You can't break out of nested loops by just using "break", so you are forced to use an actual GOTO.
 
+	move eax, 1
+	move eax, 2
+	jmp	anotherLocation		; jumps to "anotherLocation:"
 
-
-
-
+	; mov eip, 0x003F101A	; error: cant directly modify EIP
+	move eax, 3
+	move eax, 4	
+anotherLocation:		; label for jumping to EIP here
+	move eax, 5
+	move eax, 6
 
 
 	ret
